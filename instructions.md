@@ -2,7 +2,7 @@
 
 ## Your Task
 
-Your task is to build a Node.js command-line application that takes in user input to generate a logo and save it as an [SVG file](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a `.svg` file.
+Your task is to build a Node.js command-line application that takes in user input to generate a logo and save it as an [SVG file](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a .svg file.
 
 Because this application won’t be deployed, you’ll need to provide a link to a walkthrough video that demonstrates its functionality and passes all of the tests. You’ll need to submit a link to the video **and** add it to the README of your project.
 
@@ -30,15 +30,15 @@ THEN I am presented with a list of shapes to choose from: circle, triangle, and 
 WHEN I am prompted for the shape's color
 THEN I can enter a color keyword (OR a hexadecimal number)
 WHEN I have entered input for all the prompts
-THEN an SVG file is created named `logo.svg`
+THEN an SVG file is created named logo.svg
 AND the output text "Generated logo.svg" is printed in the command line
-WHEN I open the `logo.svg` file in a browser
+WHEN I open the `ogo.svg file in a browser
 THEN I am shown a 300x200 pixel image that matches the criteria I entered
 ```
 
 ## Mock-Up
 
-The following image shows a mock-up of the generated SVG given the following input entered by the user: `SVG` for the text, `white` for the text color, `circle` from the list of shapes, and `green` for the shape color. Note that this is just an image of the output SVG and not the SVG file itself:
+The following image shows a mock-up of the generated SVG given the following input entered by the user: SVG for the text, white for the text color, circle from the list of shapes, and green for the shape color. Note that this is just an image of the output SVG and not the SVG file itself:
 
 ![Image showing a green circle with white text that reads "SVG.".](./Images/10-oop-homework-demo.png)
 
@@ -60,7 +60,7 @@ It is recommended that you start with a directory structure that looks like the 
 .  
 ├── examples/           // Example svg file(s) created with the app
 ├── lib/                // Folder for classes or functions
-    ├── shapes.js       // Exports `Triangle`, `Circle`, and `Square` classes
+    ├── shapes.js       // Exports Triangle, Circle, and Square classes
     ├── shapes.test.js  // Jest tests for shapes
     └── more...         // Additional files and tests
 ├── .gitignore          // Indicates which folders and files Git should ignore
@@ -69,10 +69,10 @@ It is recommended that you start with a directory structure that looks like the 
 └── README.md           // App description, link to video, setup and usage instructions           
 ```
 
-> **Important**: Make sure that you remove `dist` from the `.gitignore` file so that Git will track this folder and include it when you push up to your application's repository.
-The application must include `Triangle`, `Circle`, and `Square` classes, as well as tests for each of these classes using Jest. While not a requirement, it is recommended that you place any common functionality and properties shared by the `Triangle`, `Circle`, and `Square` classes in a parent `Shape` class and use inheritance to reuse the code in the child classes.
+> **Important**: Make sure that you remove dist from the .gitignore file so that Git will track this folder and include it when you push up to your application's repository.
+The application must include Triangle, Circle, and Square classes, as well as tests for each of these classes using Jest. While not a requirement, it is recommended that you place any common functionality and properties shared by the Triangle, Circle, and Square classes in a parent Shape class and use inheritance to reuse the code in the child classes.
 
-Each shape class should be tested for a `render()` method that returns a string for the corresponding SVG file with the given shape color.
+Each shape class should be tested for a render() method that returns a string for the corresponding SVG file with the given shape color.
 
 The following example test should pass:
 
@@ -82,7 +82,7 @@ shape.setColor("blue");
 expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />');
 ```
 
-You may need to add additional files in the `lib` folder for handling user input, writing to a file, etc. Writing tests for these additional files is **optional**.
+You may need to add additional files in the lib folder for handling user input, writing to a file, etc. Writing tests for these additional files is **optional**.
 
 ## Helpful SVG Resources
 
@@ -121,7 +121,7 @@ This Challenge is graded based on the following criteria:
 
 * A walkthrough video that demonstrates the functionality of the SVG logo maker and passing tests must be submitted.
 
-* The `README.md` file must include a link to the walkthrough video.
+* The README.md file must include a link to the walkthrough video.
 
 * The walkthrough video must show all tests passing from the command line.
 
@@ -139,7 +139,7 @@ This Challenge is graded based on the following criteria:
 
   * Uses the [Jest package](https://www.npmjs.com/package/jest) for a suite of unit tests.
 
-  * The application must have `Triangle`, `Square`, and `Circle` classes.
+  * The application must have Triangle, Square, and Circle classes.
 
 ### Repository Quality: 13%
 
