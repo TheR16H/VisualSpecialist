@@ -6,17 +6,25 @@
 
 ## Table of Contents
 
-- [Support](#support)
-- [Visuals](#visuals)
-- [Contributions](#contributions)
-- [License](#license)
 
-## Support
-N/A
+- [Visuals](#visuals)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Support](#support)
+- [Contributions](#contributions)
+- [Acknowledgments](#Acknowledgments)
+- [License](#license)
 
 ## Visuals
 <!-- ![ScreenShot1]()
 ![Demo]()  -->
+
+## Usage
+
+## Installation
+
+## Support
+For any support find me on [Github!](https://github.com/TheR16H)
 
 ## Contributions
 N/A
