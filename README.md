@@ -29,6 +29,9 @@ For any support find me on [Github!](https://github.com/TheR16H)
 ## Contributions
 N/A
 
+## Acknowledgments
+[SVG Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
+
 ## License
 <!-- MIT License
 
