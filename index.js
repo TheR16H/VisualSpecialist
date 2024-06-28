@@ -125,9 +125,9 @@ inquirer.prompt(shapeQuestions)
         
                         // Generate SVG content with the shape and text
                         const svgContent = `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                            ${shape.render()}
-                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="16">${userInputText}</text>
-                        </svg>`;
+                        ${shape.render()}
+                        <text x="35" y="55" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="16">${userInputText}</text>
+                    </svg>`;
         
                         fs.writeFile('logo.svg', svgContent, (err) => {
                             if (err) {
