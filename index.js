@@ -92,31 +92,49 @@ inquirer.prompt(shapeQuestions)
             default:
                 console.log('Invalid shape selected.');
         }
-
-        const textInputQuestions = [
-            {
-                type: 'input',
-                name: 'text',
-                message: 'Enter text to write on the shape:'
-            }
-        ];
-
-        inquirer.prompt(textInputQuestions)
-            .then(textAnswers => {
-                const userInputText = textAnswers.text;
-
-                // Generate SVG content with the shape and text
-                const svgContent = `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                    ${shape.render()}
-                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="16">${userInputText}</text>
-                </svg>`;
-
-                fs.writeFile('logo.svg', svgContent, (err) => {
-                    if (err) {
-                        console.error('Error writing SVG file:', err);
-                    } else {
-                        console.log('SVG file saved as logo.svg');
+        
+                const textInputQuestions = [
+                    {
+                        type: 'input',
+                        name: 'text',
+                        message: 'Enter text to write on the shape:',
+                        validate: function(input) {
+                            if (input.length > 3) {
+                                return 'Text must be 3 characters or less.';
+                            }
+                            return true;
+                        }
+                    },
+                    {
+                        type: 'checkbox',
+                        name: 'colors',
+                        message: 'Select color(s) for the shape:',
+                        choices: ['red', 'blue', 'green', 'yellow', 'purple'] // Add more colors as needed
                     }
-                });
+                ];
+        
+                inquirer.prompt(textInputQuestions)
+                    .then(textAnswers => {
+                        const userInputText = textAnswers.text;
+                        const selectedColors = textAnswers.colors;
+        
+                        // Set the selected color(s) for the shape
+                        selectedColors.forEach(color => {
+                            shape.setColor(color);
+                        });
+        
+                        // Generate SVG content with the shape and text
+                        const svgContent = `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                            ${shape.render()}
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="16">${userInputText}</text>
+                        </svg>`;
+        
+                        fs.writeFile('logo.svg', svgContent, (err) => {
+                            if (err) {
+                                console.error('Error writing SVG file:', err);
+                            } else {
+                                console.log('SVG file saved as logo.svg');
+                            }
+                        });
+                    });
             });
-    });
