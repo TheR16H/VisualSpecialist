@@ -1,12 +1,12 @@
 //  import the shape classes from shapes.js in the lib folder. Use those classes to run the application logic or any other functionality
-// npx jest
+// node index.js
 const inquirer = require('inquirer');
 const fs = require('fs');
 
 const { Square, Circle, Triangle } = require('./lib/shapes');
 
 
-
+// make it so when the colors are picked these are the options
 const colors = {
     red: '#c42036',
     blue: '#004af9',
@@ -75,7 +75,7 @@ inquirer.prompt(shapeQuestions)
                         // Generate SVG content with the shape and text
                         const svgContent = `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
                         ${shape.render()}
-                        <text x="35" y="55" dominant-baseline="middle" text-anchor="middle" fill="${colors}" font-size="16">${userInputText}</text>
+                        <text x="35" y="55" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="16">${userInputText}</text>
                     </svg>`;
         
                         fs.writeFile('logo.svg', svgContent, (err) => {
