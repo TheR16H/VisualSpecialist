@@ -8,10 +8,10 @@ const { Square, Circle, Triangle } = require('./lib/shapes');
 
 
 const colors = {
-    red: '#c42036'
-    blue: '#004af9'
-    green: '#00ff00'
-    yellow: '#ffff00'
+    red: '#c42036',
+    blue: '#004af9',
+    green: '#00ff00',
+    yellow: '#ffff00',
     purple: '#660066'
 }; 
 
@@ -68,14 +68,14 @@ inquirer.prompt(shapeQuestions)
                         const selectedColors = textAnswers.colors;
         
                         // Set the selected color(s) for the shape
-                        selectedColors.forEach(color => {
-                            shape.setColor(color);
+                        selectedColors.forEach(colors => {
+                            shape.setColor(colors);
                         });
         
                         // Generate SVG content with the shape and text
                         const svgContent = `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
                         ${shape.render()}
-                        <text x="35" y="55" dominant-baseline="middle" text-anchor="middle" fill="${color}" font-size="16">${userInputText}</text>
+                        <text x="35" y="55" dominant-baseline="middle" text-anchor="middle" fill="${colors}" font-size="16">${userInputText}</text>
                     </svg>`;
         
                         fs.writeFile('logo.svg', svgContent, (err) => {
