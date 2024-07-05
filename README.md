@@ -2,7 +2,7 @@
 
 ## Description 
 
- <!-- [name](link to repo)  -->
+ <!-- [name](https://github.com/TheR16H/VisualSpecialist)  -->
 
 ## Table of Contents
 
@@ -31,7 +31,7 @@ npm i
 For any support (or if you want to see some of my other works) find me on [Github!](https://github.com/TheR16H)
 
 ## Contributions
-N/A
+No contributions will be needed for this project.
 
 ## Acknowledgments
 [SVG Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)

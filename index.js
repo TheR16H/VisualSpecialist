@@ -52,17 +52,7 @@ inquirer.prompt(shapeQuestions)
                         }
                 ];
         
-                // inquirer.prompt(textInputQuestions)
-                //     .then(textAnswers => {
-                //         const userInputText = textAnswers.text;
-                //         const selectedColors = textAnswers.colors;
-        
-                //         // Set the selected color(s) for the shape
-                //         selectedColors.forEach(colors => {
-                //             shape.setColor(colors);
-                //         });
-        
-                shape.setColor(`${data.fill}`);
+                shape.setColor(`${shape.fill}`);
 
 
 
@@ -80,4 +70,4 @@ inquirer.prompt(shapeQuestions)
                             }
                         });
                     });
-            });
+            
