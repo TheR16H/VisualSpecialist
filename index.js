@@ -6,15 +6,6 @@ const fs = require('fs');
 const { Square, Circle, Triangle } = require('./lib/shapes');
 
 
-// make it so when the colors are picked these are the options
-const colors = {
-    red: '#c42036',
-    blue: '#004af9',
-    green: '#00ff00',
-    yellow: '#ffff00',
-    purple: '#660066'
-}; 
-
 const shapeQuestions = [
     {
         type: 'list',
@@ -55,11 +46,10 @@ inquirer.prompt(shapeQuestions)
                         }
                     },
                     {
-                        type: 'checkbox',
-                        name: 'colors',
+                        type: 'input',
                         message: 'Select color(s) for the shape:',
-                        choices: ['red', 'blue', 'green', 'yellow', 'purple'] // Add more colors as needed
-                    }
+                        name: 'fill'
+                        }
                 ];
         
                 inquirer.prompt(textInputQuestions)
