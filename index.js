@@ -52,16 +52,20 @@ inquirer.prompt(shapeQuestions)
                         }
                 ];
         
-                inquirer.prompt(textInputQuestions)
-                    .then(textAnswers => {
-                        const userInputText = textAnswers.text;
-                        const selectedColors = textAnswers.colors;
+                // inquirer.prompt(textInputQuestions)
+                //     .then(textAnswers => {
+                //         const userInputText = textAnswers.text;
+                //         const selectedColors = textAnswers.colors;
         
-                        // Set the selected color(s) for the shape
-                        selectedColors.forEach(colors => {
-                            shape.setColor(colors);
-                        });
+                //         // Set the selected color(s) for the shape
+                //         selectedColors.forEach(colors => {
+                //             shape.setColor(colors);
+                //         });
         
+                shape.setColor(`${data.fill}`);
+
+
+
                         // Generate SVG content with the shape and text
                         const svgContent = `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
                         ${shape.render()}
