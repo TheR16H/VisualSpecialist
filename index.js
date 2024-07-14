@@ -1,73 +1,87 @@
-//  import the shape classes from shapes.js in the lib folder. Use those classes to run the application logic or any other functionality
-// node index.js
 const inquirer = require('inquirer');
 const fs = require('fs');
-
 const { Square, Circle, Triangle } = require('./lib/shapes');
 
-
-const shapeQuestions = [
-    {
-        type: 'list',
-        name: 'shape',
-        message: 'What shape would you like?',
-        choices: ['Triangle', 'Circle', 'Square']
+// Function to generate the SVG format
+function generateSVG(data) {
+    let shape;
+    switch (data.shape) {
+        case "Triangle":
+            shape = new Triangle();
+            break;
+        case "Circle":
+            shape = new Circle();
+            break;
+        case "Square":
+            shape = new Square();
+            break;
+        default:
+            console.log("No shape selected");
     }
-];
 
-inquirer.prompt(shapeQuestions)
-    .then(answers => {
-        let shape;
+    shape.setColor(data.fill);
 
-        switch (answers.shape) {
-            case 'Triangle':
-                shape = new Triangle();
-                break;
-            case 'Circle':
-                shape = new Circle();
-                break;
-            case 'Square':
-                shape = new Square();
-                break;
-            default:
-                console.log('Invalid shape selected.');
+    return `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        ${shape.render()}
+        <text x="35" y="55" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="16">${data.text}</text>
+    </svg>`;
+}
+
+// Function to write the SVG content to a file
+function writeToFile(svgFormat) {
+    fs.writeFile('logo.svg', svgFormat, (err) => {
+        if (err) {
+            console.error('Error writing SVG file:', err);
+        } else {
+            console.log('SVG file saved as logo.svg');
         }
-        
-                const textInputQuestions = [
-                    {
-                        type: 'input',
-                        name: 'text',
-                        message: 'Enter text to write on the shape:',
-                        validate: function(input) {
-                            if (input.length > 3) {
-                                return 'Text must be 3 characters or less.';
-                            }
-                            return true;
-                        }
-                    },
-                    {
-                        type: 'input',
-                        message: 'Select color(s) for the shape:',
-                        name: 'fill'
-                        }
-                ];
-        
-                shape.setColor(`${shape.fill}`);
+    });
+}
 
+// Function to initialize the application
+function init() {
+    const shapeQuestions = [
+        {
+            type: 'list',
+            name: 'shape',
+            message: 'What shape would you like?',
+            choices: ['Triangle', 'Circle', 'Square']
+        }
+    ];
 
+    const textInputQuestions = [
+        {
+            type: 'input',
+            name: 'text',
+            message: 'Enter text to write on the shape:',
+            validate: function(input) {
+                if (input.length > 3) {
+                    return 'Text must be 3 characters or less.';
+                }
+                return true;
+            }
+        },
+        {
+            type: 'input',
+            message: 'Select color(s) for the shape:',
+            name: 'fill'
+        }
+    ];
 
-                        // Generate SVG content with the shape and text
-                        const svgContent = `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                        ${shape.render()}
-                        <text x="35" y="55" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="16">${userInputText}</text>
-                    </svg>`;
-        
-                        fs.writeFile('logo.svg', svgContent, (err) => {
-                            if (err) {
-                                console.error('Error writing SVG file:', err);
-                            } else {
-                                console.log('SVG file saved as logo.svg');
-                            }
-                        });
-                    });
-            
+    inquirer.prompt(shapeQuestions)
+        .then((shapeAnswers) => {
+            inquirer.prompt(textInputQuestions)
+                .then((textAnswers) => {
+                    const data = {
+                        shape: shapeAnswers.shape,
+                        text: textAnswers.text,
+                        fill: textAnswers.fill
+                    };
+                    const svgFormat = generateSVG(data);
+                    writeToFile(svgFormat);
+                });
+        });
+}
+
+// Call the init function to start the application
+init();
