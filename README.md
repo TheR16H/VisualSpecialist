@@ -15,8 +15,8 @@
 - [License](#license)
 
 ## Visuals
-<!-- ![ScreenShot1](./) 
- ![ScreenShot2]()
+<!-- ![ScreenShot1](./Images/Visual1.png) 
+ ![ScreenShot2](./Images/Visual2.png)
 ![ScreenShot3]() -->
 
 ## Usage
