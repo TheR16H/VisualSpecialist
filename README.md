@@ -17,7 +17,7 @@
 ## Visuals
 <!-- ![ScreenShot1](./Images/Visual1.png) 
  ![ScreenShot2](./Images/Visual2.png)
-![ScreenShot3]() -->
+![gif]() -->
 
 ## Usage
 the intended usage is to quickly and efficently create an SVG image. to start the application run 
