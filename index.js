@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const { Square, Circle, Triangle } = require('./lib/shapes');
 
-// Function to generate the SVG format
+// Function to generate the SVG format with text centered on top of the shape
 function generateSVG(data) {
     let shape;
     switch (data.shape) {
@@ -20,6 +20,10 @@ function generateSVG(data) {
     }
 
     shape.setColor(data.fill);
+
+    const textX = 100; // Center X coordinate of the SVG
+    const textY = 100; // Center Y coordinate of the SVG
+    const textSize = 16; // Font size of the text
 
     return `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
         ${shape.render()}
