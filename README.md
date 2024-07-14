@@ -36,6 +36,7 @@ No contributions will be needed for this project.
 ## Acknowledgments
 [SVG Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
 [SVG basic shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
+[SVG VS Code extension](https://marketplace.visualstudio.com/items?itemName=jock.svg)
 
 ## License
 MIT License
