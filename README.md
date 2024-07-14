@@ -15,7 +15,7 @@
 - [License](#license)
 
 ## Visuals
-<!-- ![ScreenShot1]() 
+<!-- ![ScreenShot1](./) 
  ![ScreenShot2]()
 ![ScreenShot3]() -->
 
@@ -38,9 +38,9 @@ For any support (or if you want to see some of my other works) find me on [Githu
 No contributions will be needed for this project.
 
 ## Acknowledgments
-[SVG Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
-[SVG basic shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
-[SVG VS Code extension](https://marketplace.visualstudio.com/items?itemName=jock.svg)
+- [SVG Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
+- [SVG basic shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
+- [SVG VS Code extension](https://marketplace.visualstudio.com/items?itemName=jock.svg)
 
 ## License
 MIT License
