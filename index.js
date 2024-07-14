@@ -26,9 +26,9 @@ function generateSVG(data) {
     const textSize = 16; // Font size of the text
 
     return `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        ${shape.render()}
-        <text x="35" y="55" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="16">${data.text}</text>
-    </svg>`;
+    ${shape.render()}
+    <text x="${textX}" y="${textY}" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="${textSize}">${data.text}</text>
+</svg>`;
 }
 
 // Function to write the SVG content to a file
