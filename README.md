@@ -2,7 +2,7 @@
 
 ## Description 
 
- <!-- [name](https://github.com/TheR16H/VisualSpecialist)  -->
+ <!-- The purpose of [VisualSpecialist](https://github.com/TheR16H/VisualSpecialist) is for people who are in a crunch for time (or just for fun) want to quickly and efficently create a SVG logo. you can paste up to 3 characters on a shape of your choosing (Square, Triangle, or Circle) and then follow up by selecting the color of your choosing either using a hex code or by simply typing in the color name. -->
 
 ## Table of Contents
 
@@ -20,7 +20,11 @@
 ![ScreenShot3]() -->
 
 ## Usage
-
+the intended usage is to quickly and efficently create an SVG image. to start the application run 
+```
+node index.js
+```
+in your terminal.
 ## Installation
 just simply run the following command and you're all set! 
 ```
