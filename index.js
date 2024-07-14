@@ -87,5 +87,4 @@ function init() {
         });
 }
 
-// Call the init function to start the application
 init();
