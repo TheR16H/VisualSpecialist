@@ -17,6 +17,7 @@ The purpose of [VisualSpecialist](https://github.com/TheR16H/VisualSpecialist) i
 ![ScreenShot1](./Images/Visual1.png) 
  ![ScreenShot2](./Images/Visual2.png)
 ![gif](./Images/Visual3(gif).gif)
+[DEMO video](https://drive.google.com/file/d/1XGQCaffdEd0mZAeuXHVcfj5UJEfixQmt/view?usp=sharing) <-- click me!
 
 ## Usage
 the intended usage is to quickly and efficently create an SVG image. to start the application run 
