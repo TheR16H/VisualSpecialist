@@ -10,7 +10,7 @@ The purpose of [VisualSpecialist](https://github.com/TheR16H/VisualSpecialist) i
 - [Installation](#installation)
 - [Support](#support)
 - [Contributions](#contributions)
-- [Acknowledgments](#Acknowledgments)
+- [References](#references)
 - [License](#license)
 
 ## Visuals
@@ -37,7 +37,7 @@ For any support (or if you want to see some of my other works) find me on [Githu
 ## Contributions
 No contributions will be needed for this project.
 
-## Acknowledgments
+## Reference
 - [SVG Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
 - [SVG basic shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
 - [SVG VS Code extension](https://marketplace.visualstudio.com/items?itemName=jock.svg)
