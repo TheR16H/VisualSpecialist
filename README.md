@@ -37,7 +37,7 @@ For any support (or if you want to see some of my other works) find me on [Githu
 ## Contributions
 No contributions will be needed for this project.
 
-## Reference
+## References
 - [SVG Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
 - [SVG basic shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
 - [SVG VS Code extension](https://marketplace.visualstudio.com/items?itemName=jock.svg)
