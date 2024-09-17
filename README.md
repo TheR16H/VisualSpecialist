@@ -25,6 +25,7 @@ the intended usage is to quickly and efficently create an SVG image. to start th
 node index.js
 ```
 in your terminal.
+
 ## Installation
 just simply run the following command and you're all set! 
 ```

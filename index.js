@@ -17,6 +17,7 @@ function generateSVG(data) {
             break;
         default:
             console.log("No shape selected");
+            return;
     }
 
     shape.setColor(data.fill);
